@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 const middleware = require('body-parser')
 const dotenv = require('dotenv')
+const path = require('path')
 dotenv.config()
 const app = express()
 const route1 = require('./Router/route1')
@@ -31,6 +32,13 @@ app.use('/blog',route1)
 app.use('/blog',route2)
 app.use('/apis',route3)
 app.use('/projects',route4)
+
+
+app.use(express.static(path.join(__dirname, './hh/build')))
+
+app.get('*',(req,res)=>{
+          res.sendFile(path.join(__dirname, './hh/build/index.html'))
+})
 
 
 
