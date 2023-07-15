@@ -12,7 +12,7 @@ const nodemailer = require('nodemailer')
 
 router.use(cookie())
 router.use(cors({
-          origin: "http://localhost:3000",
+          origin: "http://localhost:6001",
           methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
           credentials: true
 }))
