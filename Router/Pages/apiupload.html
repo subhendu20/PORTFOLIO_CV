@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<style>
+          *{
+                    padding:0px;
+                    margin:0px;
+                    box-sizing: border-box;
+          }
+          html{
+                    font-size: 62.5%;
+                    font-family: sans-serif;
+          }
+          .main{
+                    width:100%;
+                    height:100vh;
+                    background-color: grey;
+
+          }
+          .main nav{
+                    height:10%;
+                    width:100%;
+                    background-color:   black;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+
+
+          }
+          .main nav span{
+                    margin:0px 2rem;
+          }
+          .main nav span a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    color:white;
+
+          }
+          .main .content{
+                    width:100%;
+                    height:90%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+          }
+
+
+
+          .main .apiform {
+                    width: 50%;
+                    padding: 10px;
+                    background-color: rgb(32, 32, 32);
+                    margin:30px 0px;
+                    display: flex;
+                    flex-direction: column;
+
+          }
+
+          .main .apiform span {
+                    width: 100%;
+                    padding: 10px 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    font-size: 25px;
+          }
+
+          .main .apiform span.btn {
+
+                    justify-content: center;
+
+          }
+          .main .apiform span.btn button{
+                    background-color: blue;
+                    font-size: 25px;
+                    border-radius: 5px;
+                    padding:10px;
+                    color:white;
+                    border:none;
+                    
+          }
+          .main .apiform span.btn button:hover{
+                    background-color: rgb(54, 54, 212);
+                    transform: scale(1.1);
+
+          }
+          .main .apiform span input{
+                    width: 60%;
+                    border: none;
+                    border-radius: 5px;
+                    outline:none;
+                    background-color: rgb(59, 58, 58);
+                    padding:0px 10px;
+                    color: white;
+                    
+
+          }
+          .main .apiform span input::placeholder{
+                    font-size: 15px;
+                    color:grey;
+          }
+          .main .apiform span input:hover{
+                    background-color: black;
+                    border:none;
+                    outline: none;
+          }
+          .main .apiform span.login{
+                    font-size: 15px;
+                    color:grey;
+
+          }
+          .main .apiform span.login a{
+                    text-decoration: none;
+                    color:rgb(58, 212, 58);
+                    
+          }
+
+
+
+          .main .uploadapi {
+                    width: 50%;
+                    padding: 10px;
+                    background-color: rgb(32, 32, 32);
+                    display: flex;
+                    flex-direction: column;
+
+          }
+
+          .main .uploadapi span {
+                    width: 100%;
+                    padding: 10px 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    font-size: 25px;
+          }
+
+          .main .uploadapi span.btn {
+
+                    justify-content: center;
+
+          }
+          .main .uploadapi span.btn button{
+                    background-color: blue;
+                    font-size: 25px;
+                    border-radius: 5px;
+                    padding:10px;
+                    color:white;
+                    border:none;
+                    
+          }
+          .main .uploadapi span.btn button:hover{
+                    background-color: rgb(54, 54, 212);
+                    transform: scale(1.1);
+
+          }
+          .main .uploadapi span input{
+                    width: 60%;
+                    border: none;
+                    border-radius: 5px;
+                    outline:none;
+                    background-color: rgb(59, 58, 58);
+                    padding:0px 10px;
+                    color: white;
+                    
+
+          }
+          .main .uploadapi span input::placeholder{
+                    font-size: 15px;
+                    color:grey;
+          }
+          .main .uploadapi span input:hover{
+                    background-color: black;
+                    border:none;
+                    outline: none;
+          }
+          .main .uploadapi span.login{
+                    font-size: 15px;
+                    color:grey;
+
+          }
+          .main .uploadapi span.login a{
+                    text-decoration: none;
+                    color:rgb(58, 212, 58);
+                    
+          }
+</style>
+<body>
+          <div class="main">
+                    <nav class="nav">
+                              <span><a href="/blog">Home</a></span>
+                              <span><a href="/blog/signup">Sign up</a></span>
+                              <span><a href="/blog/signout">Sign out</a></span>
+                              
+
+                    </nav>
+                    <div class="content">
+                              <form class="apiform" action="/apis/createapi" method="post">
+                                        <span>Name <input type="text" placeholder="Name" name="name"></span>
+                                        <span>Description<input type="text" placeholder="Description" name="description"> </span>
+                                        <span>Url<input type="text" placeholder="Url" name="url"></span>
+                                        <span class="btn"><button type="submit">upload</button></span>
+                                        
+                              </form>
+                              <form action="" class="uploadapi">
+                                        <span>Username <input type="text" placeholder="Username" name="username"></span>
+                                        <span>Password <input type="password" placeholder="password" name="password"> </span>
+                                        <span class="btn"><button>Sign up</button></span>
+                                       
+          
+                              </form>
+
+                    </div>
+                    
+          </div>
+          
+</body>
+</html>

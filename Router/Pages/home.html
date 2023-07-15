@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>portfolio-backend</title>
+          <script src="https://code.jquery.com/jquery-3.6.4.js"
+                    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+</head>
+<style>
+          * {
+                    padding: 0px;
+                    margin: 0px;
+                    box-sizing: border-box;
+          }
+
+          html {
+                    font-size: 62.5%;
+          }
+
+          .main {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: black;
+                    background-attachment: fixed;
+
+
+          }
+
+          .main nav {
+                    width: 100%;
+                    height: 10%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+
+                    background: none;
+
+
+          }
+
+          .main nav span {
+                    margin: 0px 20px
+          }
+
+          .main nav span a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: white;
+                    font-weight: 500px;
+
+          }
+
+          .main .content {
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+          }
+
+          .main .content .form-blog {
+                    width: 50%;
+                    padding: 10px;
+                    background-color: rgb(32, 32, 32);
+                    margin: auto;
+
+          }
+
+          .main .content .form-blog span {
+                    width: 100%;
+                    padding: 10px 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    font-size: 25px;
+          }
+
+          .main .content .form-blog span.btn {
+
+                    justify-content: center;
+
+          }
+
+          .main .content .form-blog span.btn button {
+                    background-color: blue;
+                    font-size: 25px;
+                    border-radius: 5px;
+                    padding: 10px;
+                    color: white;
+                    border: none;
+
+          }
+
+          .main .content .form-blog span.btn button:hover {
+                    background-color: rgb(54, 54, 212);
+                    transform: scale(1.1);
+
+          }
+
+          .main .content .form-blog span input {
+                    width: 60%;
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+                    background-color: rgb(59, 58, 58);
+                    padding: 0px 10px;
+                    color: white;
+
+
+          }
+
+          .main .content .form-blog span input::placeholder {
+                    font-size: 15px;
+                    color: grey;
+          }
+
+          .main .content .form-blog span input:hover {
+                    background-color: black;
+                    border: none;
+                    outline: none;
+          }
+
+
+
+
+
+
+          .main .content .form-project {
+                    width: 50%;
+                    padding: 10px;
+                    background-color: rgb(32, 32, 32);
+                    margin: auto;
+
+          }
+
+          .main .content .form-project span {
+                    width: 100%;
+                    padding: 10px 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    font-size: 25px;
+          }
+
+          .main .content .form-project span.btn {
+
+                    justify-content: center;
+
+          }
+
+          .main .content .form-project span.btn button {
+                    background-color: blue;
+                    font-size: 25px;
+                    border-radius: 5px;
+                    padding: 10px;
+                    color: white;
+                    border: none;
+
+          }
+
+          .main .content .form-project span.btn button:hover {
+                    background-color: rgb(54, 54, 212);
+                    transform: scale(1.1);
+
+          }
+
+          .main .content .form-project span input {
+                    width: 60%;
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+                    background-color: rgb(59, 58, 58);
+                    padding: 0px 10px;
+                    color: white;
+
+
+          }
+
+          .main .content .form-project span input::placeholder {
+                    font-size: 15px;
+                    color: grey;
+          }
+
+          .main .content .form-project span input:hover {
+                    background-color: black;
+                    border: none;
+                    outline: none;
+          }
+</style>
+
+<body>
+          <div class="main">
+                    <nav class="nav">
+                              <span><a href="/blog">Home</a></span>
+                              <span><a href="/blog/getsignup">Sign up</a></span>
+                              <span><a href="/blog/signout">Sign out</a></span>
+                              <span><a href="/apis">Apis</a></span>
+
+
+
+                    </nav>
+                    <div class="content">
+                              <form action="/blog/addblog" class="form-blog" method="post">
+                                        <span>
+                                                  <p>Title</p><input type="text" placeholder="title" name="title">
+                                        </span>
+                                        <span>
+                                                  <p>Tag</p><input type="text" placeholder="tag" name="tag">
+                                        </span>
+
+                                        <span>
+                                                  <p>Body</p><input type="" placeholder="body" name="body">
+                                        </span>
+                                        <span class="btn"><button>Upload</button></span>
+                              </form>
+                              <form action="/project/createproject" class="form-project" method="post">
+                                        <span>
+                                                  <p>Title</p><input type="text" id="title-project" placeholder="title"
+                                                            name="title">
+                                        </span>
+                                        <span>
+                                                  <p>description</p><input id="description-project" type="text"
+                                                            placeholder="description" name="description">
+                                        </span>
+
+                                        <span>
+                                                  <p>link</p><input id="link-project" type="" placeholder="link"
+                                                            name="link">
+                                        </span>
+                                        <span>
+                                                  <p>Image</p><input id="project-image" type="file" accept="image/*">
+                                        </span>
+                                        <span class="btn"><button id="saveproject">Upload</button></span>
+                              </form>
+
+                    </div>
+
+
+
+
+          </div>
+
+
+          <script>
+                    const obj = {
+                              title: '',
+                              description: '',
+                              link: '',
+                              image: ''
+
+                    }
+                    $('#title-project').change((e) => {
+                              console.log(e.target.value)
+                              obj.title = e.target.value
+                    })
+                    $('#description-project').change((e) => {
+                              console.log(e.target.value)
+                              obj.description = e.target.value
+                    })
+                    $('#link-project').change((e) => {
+                              console.log(e.target.value)
+                              obj.link = e.target.value
+                    })
+                    $('#project-image').change((e) => {
+                              var filereader = new FileReader()
+                              filereader.readAsDataURL(e.target.files[0])
+                              filereader.onload = () => {
+                                        console.log(filereader.result)
+                                        obj.image = filereader.result
+                              }
+                              filereader.onerror = (e) => {
+                                        console.log(e)
+
+                              }
+                    })
+
+                    $(document).ready(
+                              $('#saveproject').click((e) => {
+                                        e.preventDefault()
+                                        console.log(obj)
+                                        axios.post("/projects/createproject", obj, {
+                                                  withCredentials: true,
+                                                  
+                                        }).then((response) =>{
+                                                  console.log(response.data)
+                                                  // do whatever you want if console is [object object] then stringify the response
+                                        }).catch((e) => {
+                                                  console.log(e)
+                                        })
+
+
+
+                              })
+                    )
+
+
+          </script>
+
+</body>
+
+</html>

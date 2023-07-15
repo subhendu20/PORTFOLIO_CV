@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a24e28b4.css",
+    "main.js": "/static/js/main.4bb18300.js",
+    "static/js/787.3a8354dc.chunk.js": "/static/js/787.3a8354dc.chunk.js",
+    "static/media/house_animated.png": "/static/media/house_animated.b12d880416accebeb33b.png",
+    "static/media/background_animated.jpg": "/static/media/background_animated.ab3f89177e3aa4dc2395.jpg",
+    "static/media/moonanimate.png": "/static/media/moonanimate.77a2918393da3381cb8b.png",
+    "static/media/animatemobile.png": "/static/media/animatemobile.d4e4d5dc6e9af8bcd45e.png",
+    "static/media/background2.jpg": "/static/media/background2.d5befc46956c1ec45447.jpg",
+    "static/media/stopboard.png": "/static/media/stopboard.695da7109fc9f970ede2.png",
+    "static/media/background1.png": "/static/media/background1.0e5d63f4193b8ec1f5ae.png",
+    "static/media/background_walpaper.jpg": "/static/media/background_walpaper.6547feb91d57c33bbc53.jpg",
+    "static/media/mountain_animation.png": "/static/media/mountain_animation.20b90557bc4c21e18c7b.png",
+    "static/media/road png.png": "/static/media/road png.7f3f8b6d21ad2b7991ea.png",
+    "static/media/PARALLAX-EFFECT.png": "/static/media/PARALLAX-EFFECT.2d484aa8470c2c8dfb20.png",
+    "index.html": "/index.html",
+    "main.a24e28b4.css.map": "/static/css/main.a24e28b4.css.map",
+    "main.4bb18300.js.map": "/static/js/main.4bb18300.js.map",
+    "787.3a8354dc.chunk.js.map": "/static/js/787.3a8354dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a24e28b4.css",
+    "static/js/main.4bb18300.js"
+  ]
+}
