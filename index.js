@@ -11,7 +11,7 @@ const route2=require('./Router/route2')
 const route3 = require('./Router/route3')
 const route4 = require('./Router/Route4')
       
-mongoose.connect(process.env.DB,{
+mongoose.connect(process.env.DB || 6001,{
           useNewUrlParser:true,
           
           useUnifiedTopology:true
