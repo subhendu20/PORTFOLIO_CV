@@ -15,7 +15,7 @@ const cookie = require('cookie-parser')
 
 router.use(cookie())
 router.use(cors({
-          origin: 'http://localhost:6001/*',
+          origin: 'http://localhost:6001/projects',
           methods: ['POST', 'PUT', 'GET','OPTIONS', 'HEAD'],
           credentials: true
 }))
